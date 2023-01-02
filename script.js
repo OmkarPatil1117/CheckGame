@@ -3,6 +3,7 @@ var num = 0
 
 function getNum() {
      num = generateNum(20);
+     console.log(num);
 }
 
 function reloadgame() {
@@ -10,6 +11,7 @@ function reloadgame() {
     document.querySelector(".guess").value = ""
     document.querySelector(".score").innerHTML = 20
     document.getElementById("bod").style.backgroundColor = "#222"
+    document.querySelector(".highscore").innerHTML = "0";
     getNum()
 }
 
@@ -36,6 +38,7 @@ function maincheck() {
     } else if(val == num) {
         document.querySelector(".message").innerHTML = "Number is Correct"
         document.getElementById("bod").style.backgroundColor = "#60b347"
+        document.querySelector(".highscore").innerHTML = "350";
     }
 }
 
