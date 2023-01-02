@@ -28,13 +28,14 @@ function maincheck() {
     val !== NaN  ? document.querySelector(".message").innerHTML = "Please enter number" : "";
     val >= 21 ? document.querySelector(".message").innerHTML = "Number should be less than 20" : ""
     if(val > num && val < 21) {
+        reduce()
         document.querySelector(".message").innerHTML = "Number is greater"
     } else if(val < num) {
+        reduce()
         document.querySelector(".message").innerHTML = "Number is smaller"
     } else if(val == num) {
         document.querySelector(".message").innerHTML = "Number is Correct"
         document.getElementById("bod").style.backgroundColor = "#60b347"
     }
-    reduce()
 }
 
